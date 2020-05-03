@@ -1,0 +1,7 @@
+title Ex. 0.6
+
+note over Browser: The Javascritp code in the spa.js file handle the\nHTML form <input> content when the user press\nthe "save" button and send it to the server in the\ncorrect JSON format
+Browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over Server: The server responds with a 201\nstatus, informing the client that\nthe resource has been created
+Server-->Browser: {"message":"note created"}
+note over Browser: The page content is updated by the Javascript\ncode with the new note, without reloading the\npage 

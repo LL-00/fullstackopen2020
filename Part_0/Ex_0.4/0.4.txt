@@ -1,0 +1,17 @@
+title Ex. 0.4
+
+note over Browser: User types a new note and press submit
+
+Browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+note over Server: The <input> text content is received\nas the body of the request, then the\nnotes list is updated. The server\nreplies with a "302" status that\ncause an URL redirect
+Server-->Browser: URL Redirect
+note over Browser: The page is reloaded with the new content
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Server-->Browser: HTML
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+Server-->Browser: main.js
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+Server-->Browser: data.json
+note over Browser: The page is displayed with\nthe new note at the end of\nthe list 
